@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["layout.sass","params.sass"],"names":[],"mappings":"AAUA;EACE;;;AAEF;EACE;EACA;EACA;EACA,YCbiB;EDcjB,OCZmB;;;ADerB;EACE;EAdA,YCLiB;;ADAjB;EAkBF;IAjBI;IACA;;;AAqBF;EACE,OCrBiB;;;ADuBrB;EACE;EACA,OCzBmB;ED0BnB;EAxBA,YCLiB;;ADAjB;EA0BF;IAzBI;IACA;;;;AA+BJ;EACE;EACA;EACA;EACA;;AArCA;EAiCF;IAhCI;IACA;;;AAuCF;EACE;IACE","file":"layout.css"}

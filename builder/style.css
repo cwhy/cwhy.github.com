@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+a {
+  color: #222;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+nav ul, nav ol {
+  list-style: none none;
+}
+
+body {
+  font: 15px "Charter", "Geogia", serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h1, h2, h3, h4 {
+  padding: 0;
+  font-family: "TheSans B6 SemiBold", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  margin: 0;
+  display: block;
+}
+
+h1 {
+  font-family: "TheSans B6 SemiBold", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.5em;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  min-width: 10em;
+  font-size: 1.1rem;
+  font-family: "TheSans B6 SemiBold", Helvetica, Arial, sans-serif;
+}
+
+h4 {
+  font-style: italic;
+  font-family: "Charter", "Geogia", serif;
+  font-weight: 800;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+@use "params" as *
+
+@mixin wrapped
+  @media (min-width: $normal-large-break)
+    width: 60rem
+    margin: auto
+
+@mixin accented-bg
+  background: $color-lightgray2
+
+html
+  height: 100%
+
+body
+  display: flex
+  flex-direction: column
+  height: 100%
+  background: $color-lightgray3
+  color: $color-almost-black
+
+
+header
+  border-bottom: 1.5rem solid $color-lightgray
+  @include wrapped
+  @include accented-bg
+
+  #title
+    color: $color-almost-black
+
+footer
+  border-top: 1.5rem solid $color-lightgray
+  color: $color-almost-black
+  padding: 1.4rem 0
+  @include wrapped
+  @include accented-bg
+
+#content
+  flex-grow: 4
+  display: flex
+  flex-direction: row
+  justify-content: center
+  @include wrapped
+
+
+  @media (min-width: $mid-normal-break)
+    section
+      width: 35em
+
+
+
