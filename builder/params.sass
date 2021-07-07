@@ -1,21 +1,82 @@
 // Color scheme
-$color-darkgrey: #222
-$color-lightgray: #eee
-$color-lightgray2: #dfdfdf
-$color-lightgray3: #f0f0f0
+$color-darkgray: #222
+$color-gray: #cfcfcf
+$color-gray-lighter: #eee
+$color-gray-light: #dfdfdf
+$color-almost-white: #fdfdfd
 $color-mild-alt: #b3d4fc
-$color-almost-black: #999
-
-// Typography
-$font-stack-serif: 'Charter', 'Geogia', serif
-$font-stack-sans-serif: "TheSans B6 SemiBold", Helvetica, Arial, sans-serif
-$base-font-size: 15px
-$extra-bold: 800
-$medium: 500
-$light: 300
+$color-almost-black: #666666
 
 // Responsive
 $small-mid-break: 768px
 $mid-normal-break: 950px
-$normal-large-break: 1400px
+$normal-large-break: 60em
 
+// Typography
+$base-font-size: 15px
+$weight-thin: 100
+$weight-extra-light: 200
+$weight-light: 300
+$weight-regular: 400
+$weight-medium: 500
+$weight-semi-bold: 600
+$weight-bold: 700
+$weight-extra-bold: 800
+$weight-black: 900
+$weight-extra-black: 950
+
+$spacing-1: 1.2rem
+
+@mixin font-serif
+  font-family: 'Charter', 'Geogia', serif
+
+@mixin font-sans-5
+  font-family: "TheSans B5 Plain", Helvetica, Arial, sans-serif
+  font-weight: $weight-regular
+
+@mixin font-sans-6
+  font-family: "TheSans B6 Semibold", Helvetica, Arial, sans-serif
+  font-weight: $weight-semi-bold
+
+@mixin font-sans-7
+  font-family: "TheSans B7", Helvetica, Arial, sans-serif
+  font-weight: $weight-bold
+
+@mixin display-serif-2
+  @include font-serif
+  font-weight: $weight-bold
+  font-style: italic
+  line-height: 1.5
+
+@mixin display-sans-1
+  @include font-sans-7
+  line-height: 2
+
+@mixin display-sans-2
+  @include font-sans-6
+  line-height: 1.5
+
+@mixin display-sans-3
+  @include font-sans-5
+  line-height: 1.2
+
+@mixin body-text
+  @include font-serif
+  font-size: $base-font-size
+  font-weight: $weight-regular
+
+// Shared styles
+@mixin with-shadow-down
+  box-shadow: 0 1px 9px $color-gray
+
+@mixin with-shadow-btn
+  box-shadow: 1px -1px 1px 1px $color-gray
+
+@mixin with-shadow-btn-pressed
+  box-shadow: inset 2px 0 2px 0 $color-gray
+
+.btn-non-current-state
+  box-shadow: inset 0 -1px 1px 0 $color-gray-light
+
+.btn-current-state
+  box-shadow: none

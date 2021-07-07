@@ -1,37 +1,45 @@
 @use "params" as *
 
-@mixin wrapped
-  @media (min-width: $normal-large-break)
-    width: 60rem
-    margin: auto
 
 @mixin accented-bg
-  background: $color-lightgray2
+  background: $color-gray-light
 
 html
   height: 100%
+
+.wrapper
+  @media (min-width: $normal-large-break)
+    width: $normal-large-break
+    margin: auto
 
 body
   display: flex
   flex-direction: column
   height: 100%
-  background: $color-lightgray3
+  background: $color-almost-white
   color: $color-almost-black
 
 
 header
-  border-bottom: 1.5rem solid $color-lightgray
-  @include wrapped
+  border-bottom: $spacing-1 solid $color-gray-lighter
+  margin-bottom: $spacing-1
   @include accented-bg
+  @include with-shadow-down
+  .wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
 
-  #title
-    color: $color-almost-black
+
+    #title
+      @include display-sans-1
+      color: $color-almost-black
 
 footer
-  border-top: 1.5rem solid $color-lightgray
+  border-top: $spacing-1 solid $color-gray-lighter
   color: $color-almost-black
   padding: 1.4rem 0
-  @include wrapped
   @include accented-bg
 
 #content
@@ -39,12 +47,9 @@ footer
   display: flex
   flex-direction: row
   justify-content: center
-  @include wrapped
+  background-color: $color-almost-white
 
 
   @media (min-width: $mid-normal-break)
     section
       width: 35em
-
-
-
