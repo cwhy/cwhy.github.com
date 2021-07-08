@@ -16,7 +16,7 @@
     "serve": "^12.0.0"
   },
   "scripts": {
-    "build:init": "cp -r assets docs",
+    "build:init": "mkdir -p docs && cp assets/* docs",
     "build:scss-to-css": "sass sass/main.sass docs/main.css",
     "build:pug-to-html": "pug3 src/pages/ -o docs --pretty",
     "build:post-css": "postcss --no-map --use autoprefixer cssnano -d docs --ext .min.css docs/*.css",
