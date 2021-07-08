@@ -13,7 +13,7 @@ jobs:
       - run: yarn
       - run: yarn build
       - name: Stage Files
-        run: git add -f build_production
+        run: git add -f docs
       - name: Commit files
         run: |
           git config --local user.email "actions@github.com"
