@@ -3,12 +3,9 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' type='text/css' href='main.css')
     title Chen Yu
-    style
-      include style.css
-      include layout.css
-      include nav.css
   body
-    include header.pug
-    include about.pug
-    include footer.pug
+    include ../header
+    include ../about
+    include ../footer
