@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    CWhy
+
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, PUG, SASS, YARN, GITLAB ACTIONS
