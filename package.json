@@ -20,7 +20,7 @@
     "build:scss-to-css": "sass sass/main.sass docs/main.css",
     "build:pug-to-html": "pug3 src/pages/ -o docs --pretty",
     "build:post-css": "postcss --no-map --use autoprefixer cssnano -d docs --ext .min.css docs/*.css",
-    "build": "yarn build:init && del-cli docs/* && yarn build:scss-to-css && yarn build:post-css && yarn build:pug-to-html",
+    "build": "del-cli docs/* && yarn build:init && yarn build:scss-to-css && yarn build:post-css && yarn build:pug-to-html",
     "watch:scss-to-css": "sass --watch sass/main.sass docs/main.min.css",
     "watch:pug-to-html": "pug3 src/pages/ -o docs --watch",
     "watch": "yarn build:init && concurrently \"serve docs\" \"yarn watch:scss-to-css\" \"yarn watch:pug-to-html\""
