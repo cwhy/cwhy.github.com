@@ -1,0 +1,51 @@
+@use "params" as *
+
+$nav-padding: 0.8em
+$nav-padding-mobile: 0.5em
+@mixin active-padding($padding)
+
+nav
+  display: flex
+  color: $color-gray-dark
+  align-self: flex-end
+  margin-top: 0.2em
+  @include display-sans-3
+
+  ul
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: row
+    li
+      margin-left: 0.5em
+
+      a
+        display: block
+        padding: $nav-padding
+        text-align: center
+        text-decoration: none
+        background: $color-gray-lighter
+        border-radius: 0 $spacing-1 0 0
+
+        &:hover, &:focus
+          text-decoration: underline
+          @include with-shadow-btn
+
+        &:active, &:focus &:active
+          @include with-shadow-btn-pressed($nav-padding)
+
+  @media (min-width: $small-mid-break)
+    flex-direction: row-reverse
+  @media (max-width: $small-mid-break)
+    align-self: center
+    font-size: 1.1em
+    ul
+      justify-content: space-around
+      li a
+        padding: $nav-padding-mobile
+        &:active, &:focus &:active
+          @include with-shadow-btn-pressed($nav-padding-mobile)
+  @media (min-width: $mid-normal-break)
+    font-size: 1.4em
+  @media (max-width: $mid-normal-break)
+    font-size: 1.2em

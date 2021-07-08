@@ -26,8 +26,13 @@ nav
     list-style: none none
 
 // Headings
-body
-  @include body-text
+html
+  @media (min-width: $tiny-small-break)
+    @include body-text
+    font-size: $base-font-size
+  @media (max-width: $tiny-small-break)
+    @include body-text
+    font-size: $base-font-size-mobile
 
 h1, h2, h3, h4
   padding: 0
@@ -35,7 +40,7 @@ h1, h2, h3, h4
   display: block
 
 h1
-  font-size: 2.5rem
+  font-size: 2rem
   @include display-sans-2
 
 h2

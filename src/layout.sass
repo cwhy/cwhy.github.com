@@ -1,0 +1,81 @@
+@use "params" as *
+
+
+@mixin accented-bg
+  background: $color-gray-light
+
+html
+  height: 100%
+
+.wrapper
+  @media (min-width: $normal-large-break)
+    width: $normal-large-break
+    margin: auto
+
+  @media (min-width: $mid-normal-break) and (max-width: $normal-large-break)
+    width: 100%
+
+  @media (min-width: $small-mid-break) and (max-width: $mid-normal-break)
+    width: 100%
+
+//    width: $normal-large-break
+//    margin: auto
+
+body
+  display: flex
+  flex-direction: column
+  height: 100%
+  background: $color-almost-white
+  color: $color-gray-dark
+
+
+
+header
+  border-bottom: $spacing-1 solid $color-gray-lighter
+  margin-bottom: $spacing-1
+  @include accented-bg
+  @include with-shadow-down
+  .wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @media (min-width: $small-mid-break)
+      flex-direction: row
+    @media (max-width: $small-mid-break)
+      flex-direction: column
+
+
+    #title
+      @include display-sans-2
+      color: $color-gray-dark
+      padding: 0.5em
+      white-space: nowrap
+      font-size: calc(2.5vw + 1em)
+      @media (min-width: $mid-normal-break)
+        font-size: 2.2em
+      @media (max-width: $small-mid-break)
+        font-size: 1.8em
+        align-self: flex-start
+        padding: 0.2em $spacing-1
+      .serif
+        @include display-serif-1
+
+
+footer
+  border-top: $spacing-1 solid $color-gray-lighter
+  color: $color-gray-dark
+  padding: $spacing-1
+  @include accented-bg
+
+#content
+  flex-grow: 4
+  display: flex
+  flex-direction: row
+  justify-content: center
+  background-color: $color-almost-white
+  padding: 0 $spacing-1
+
+
+  @media (min-width: $mid-normal-break)
+    section
+      width: 35em
