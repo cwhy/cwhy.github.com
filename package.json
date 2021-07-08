@@ -5,24 +5,23 @@
   "private": true,
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
+    "@anduh/pug-cli": "^1.0.0-alpha8",
     "autoprefixer": "^10.2.6",
     "concurrently": "^6.2.0",
     "cssnano": "^5.0.6",
     "del-cli": "^4.0.0",
-    "live-server": "^1.2.1",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
-    "pug-cli": "^1.0.0-alpha6",
-    "sass": "^1.35.2"
+    "sass": "^1.35.2",
+    "serve": "^12.0.0"
   },
   "scripts": {
     "build:scss-to-css": "sass sass/main.sass docs/main.css",
     "build:pug-to-html": "pug src/pages/ -o docs --pretty",
     "build:post-css": "postcss --no-map --use autoprefixer cssnano -d docs --ext .min.css docs/*.css",
     "build": "del-cli docs/* && yarn build:scss-to-css && yarn build:post-css && yarn build:pug-to-html",
-    "serve": "live-server --watch=\\\"docs/*.css,docs/*.html\\\" --mount=/:docs",
     "watch:scss-to-css": "sass --watch sass/main.sass docs/main.min.css",
     "watch:pug-to-html": "pug src/pages/ -o docs --watch",
-    "watch": "concurrently \"yarn serve\" \"yarn watch:scss-to-css\" \"yarn watch:pug-to-html\""
+    "watch": "concurrently \"serve docs\" \"yarn watch:scss-to-css\" \"yarn watch:pug-to-html\""
   }
 }
