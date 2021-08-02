@@ -1,0 +1,19 @@
+mixin tab(name, link="#", pageName)
+  li
+    if name === pageName
+      a.btn-current-state(href=link)= name
+    else
+      a.btn-non-current-state(href=link)= name
+
+mixin pageHeader(pageName="Projects")
+  header
+    .wrapper
+      h1#title chenyu.
+        span.serif
+          |  I/O
+      nav
+        ul
+          +tab("Projects", '/', pageName)
+          +tab("Articles", '/articles', pageName)
+          +tab("Journals", '/journals', pageName)
+          +tab("Contacts", '/contacts', pageName)
