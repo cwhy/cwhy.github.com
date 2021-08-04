@@ -18,11 +18,13 @@
   "scripts": {
     "build:init": "mkdir -p docs && cp assets/* docs",
     "build:scss-to-css": "sass sass/main.sass docs/main.css",
-    "build:pug-to-html": "pug3 src/pages/ -o docs --pretty",
+    "build:pug-to-html-pages": "pug3 src/pages/ -o docs --pretty",
+    "build:pug-to-html-journals": "pug3 src/journals/ -o docs/journals --pretty",
     "build:post-css": "postcss --no-map --use autoprefixer cssnano -d docs --ext .min.css docs/*.css",
-    "build": "del-cli docs/* && yarn build:init && yarn build:scss-to-css && yarn build:post-css && yarn build:pug-to-html",
+    "build": "del-cli docs/* && yarn build:init && yarn build:scss-to-css && yarn build:post-css && yarn build:pug-to-html-pages && yarn build:pug-to-html-journals",
     "watch:scss-to-css": "sass --watch sass/main.sass docs/main.min.css",
-    "watch:pug-to-html": "pug3 src/pages/ -o docs --watch",
-    "watch": "yarn build:init && concurrently \"serve docs\" \"yarn watch:scss-to-css\" \"yarn watch:pug-to-html\""
+    "watch:pug-to-html-pages": "pug3 src/pages/ -o docs --watch",
+    "watch:pug-to-html-journals": "pug3 src/journals/ -o docs/journals --watch",
+    "watch": "yarn build:init && concurrently \"serve docs\" \"yarn watch:scss-to-css\" \"yarn watch:pug-to-html-pages\" \"yarn watch:pug-to-html-journals\""
   }
 }

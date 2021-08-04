@@ -2,10 +2,11 @@ extends ../common/layout.pug
 block head
   title Journals -- CY.io
 
-block content
+block header
   +pageHeader("Journals")
-  #content
-    section
-      h2 Journal Index
-      ul
-        li The story of the website
+block content
+  section
+    h2 Journal Index
+    ul
+      li
+        a(href="journals/04-08-21") The story of this website
