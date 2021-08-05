@@ -17,3 +17,14 @@ mixin pageHeader(pageName="Projects")
           +tab("Articles", '/articles', pageName)
           +tab("Journals", '/journals', pageName)
           +tab("Contacts", '/contacts', pageName)
+
+mixin journalHeader
+  header
+    .wrapper
+      h1#title
+        a(href='/journals') &lt;
+        span
+          | chenyu.
+        span.serif
+          |  I/O
+        Journals
