@@ -8,7 +8,9 @@ mixin tab(name, link="#", pageName)
 mixin pageHeader(pageName="Projects")
   header
     .wrapper
-      h1#title chenyu.
+      h1#title
+        | chenyu
+        a(href='/LowQualityPoems') .
         span.serif
           |  I/O
       nav
@@ -24,8 +26,7 @@ mixin journalHeader
       h1#title
         a(href='/journals') &lt;
         span
-          | chenyu
-          a(href='/LowQualityPoems').
+          | chenyu.
         span.serif
           |  I/O
         Journals
